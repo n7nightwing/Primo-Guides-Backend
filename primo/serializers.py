@@ -10,7 +10,7 @@ class GameSerializer(serializers.HyperlinkedModelSerializer):
     )
 
     class Meta:
-        model = Artist
+        model = Game
         fields = ('name', 'publisher', 'genre', 'guides',)
 
 
