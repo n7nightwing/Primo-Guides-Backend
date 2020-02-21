@@ -5,21 +5,21 @@ from .models import Game, Guide, User
 # Create your views here.
 
 
-def GameList(generics.ListCreateAPIView):
+class GameList(generics.ListCreateAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
 
 
-def GameDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Game.ojbects.all()
+class GameDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Game.objects.all()
     serializer_class = GameSerializer
 
 
-def GuideList(generics.ListCreateAPIView):
+class GuideList(generics.ListCreateAPIView):
     queryset = Guide.objects.all()
     serializer_class = GuideSerializer
 
 
-def GuideDetail(generics.ListCreateAPIView):
+class GuideDetail(generics.ListCreateAPIView):
     queryset = Guide.objects.all()
     serializer_class = GuideSerializer
