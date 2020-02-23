@@ -12,11 +12,16 @@ class Game(models.Model):
     publisher = models.CharField(max_length=100)
     genre = models.CharField(max_length=100)
 
+# error from postman request, "Game object has no attribute "guides""
+
 
 class Guide(models.Model):
     title = models.TextField()
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='guides')
+    game = models.ForeignKey(
+        Game, on_delete=models.CASCADE, related_name='guides'
+    )
     skill_level = models.CharField(max_length=5)
     content = models.TextField()
 
