@@ -11,6 +11,7 @@ class Game(models.Model):
     name = models.CharField(max_length=256)
     publisher = models.CharField(max_length=100)
     genre = models.CharField(max_length=100)
+    photo_url = models.TextField(default="")
 
 # error from postman request, "Game object has no attribute "guides""
 

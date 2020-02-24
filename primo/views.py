@@ -1,5 +1,5 @@
 from rest_framework import generics
-from .serializers import GameSerializer, GuideSerializer
+from .serializers import GuideSerializer, GameSerializer, UserSerializer
 from .models import Game, Guide, User
 
 # Create your views here.
@@ -20,6 +20,16 @@ class GuideList(generics.ListCreateAPIView):
     serializer_class = GuideSerializer
 
 
-class GuideDetail(generics.ListCreateAPIView):
+class GuideDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Guide.objects.all()
     serializer_class = GuideSerializer
+
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
