@@ -30,7 +30,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost',
-                 '127.0.0.1',            'primo-guides.herokuapp.com']
+                 '127.0.0.1', 'primo-guides.herokuapp.com']
 
 
 # Application definition
