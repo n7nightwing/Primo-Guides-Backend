@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'primo_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'primo_db',
-        'USER': 'primo_admin',
-        'PASSWORD': 'dfNn6yWTQk4N',
-        'HOST': 'localhost'
+        'NAME': 'dcauagrf9qcjrv',
+        'USER': 'ihxvgezgdalbxz',
+        'PASSWORD': '989b0f378af826a8bdf5ab366727f603decec01aadf8e866367ebe58d9366c84',
+        'HOST': 'ec2-54-197-48-79.compute-1.amazonaws.com'
     }
 }
 
@@ -131,5 +132,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Configure Django App for Heroku.
-import django_heroku
 django_heroku.settings(locals())
