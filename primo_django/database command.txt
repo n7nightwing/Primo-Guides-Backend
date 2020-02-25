@@ -1,0 +1,1 @@
+heroku pg:push primo_guides DATABASE_URL --app primo-guides
